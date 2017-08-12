@@ -9,4 +9,9 @@ class HomeController {
         echo 'Hola Mundo';
     }
 
+    public function tareas()
+    {
+        echo 'Mis tareas';
+    }
+
 }

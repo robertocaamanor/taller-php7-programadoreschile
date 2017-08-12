@@ -5,7 +5,7 @@ namespace App;
 class Router {
 
     protected $routers = [
-      'GET'
+      'GET', 'POST'
     ];
 
     public static function load($file)
@@ -22,6 +22,11 @@ class Router {
     public function get($uri, $controller)
     {
         $this->routers['GET'][$uri] = $controller;
+    }
+
+    public function post($uri, $controller)
+    {
+        $this->routers['POST'][$uri] = $controller;
     }
 
     public function send($uri, $method)
